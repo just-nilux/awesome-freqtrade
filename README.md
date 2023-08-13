@@ -1,31 +1,33 @@
-
 <div style="width: 100%;">
   <a href="https://github.com/just-nilux/awesome-freqtrade/blame/main/awesome-freqtrade.svg">
-    <img src="awesome-freqtrade.svg" style="width: 100%;" alt="Click to see the source">
+    <img src="awesome-freqtrade.svg" style="width: 100%;" />
   </a>
 </div>
-<hr>
 
-# Freqtrade & FreqAI Snippets [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
+<br>
+<hr>
+<br>
+
+# Awesome Freqtrade [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
 A collection of Freqtrade & FreqAI snippets, all in one place. Mostly collected from the [Freqtrade Discord](https://discord.com/invite/T7SmVvQ8sD) and [FreqAI Discord](https://discord.com/invite/hYuzJYKFjz) - now all into one place. While I’ve been trying to credit where due, things might be missing. If you believe anything here is your work and credits should be given, let me know.
 
+Freqtrade is a free and open source crypto trading bot written in Python. It is designed to support all major exchanges and be controlled via Telegram or webUI. It contains backtesting, plotting and money management tools as well as strategy optimization by machine learning. 
 
-> <picture>
->   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Mqxx/GitHub-Markdown/main/blockquotes/badge/light-theme/note.svg">
->   <img alt="Note" src="https://raw.githubusercontent.com/Mqxx/GitHub-Markdown/main/blockquotes/badge/dark-theme/note.svg">
-> </picture><br>
->
-> **It's easy to contribute!** Create an issue or PR with the content you like to add
+[Freqtrade Discord](https://discord.com/invite/T7SmVvQ8sD) | [FreqAI Discord](https://discord.com/invite/hYuzJYKFjz) | [Documentation](https://www.freqtrade.io/en/stable/) | [Github](https://github.com/freqtrade/freqtrade)
+
+<br>
+
+> 🤍 **CONTRIBUTE** It's easy to contribute!** Create an issue or PR with the content you like to add
+<br>
 
 ## Contents
 
 - [Freqtrade](#freqtrade)
-    - [Code Snippets](#code-snippets)
-    - [Indicators](#indicators)
-    - [Strategies](#strategies)
-    - [Backtesting](#placeholder)
-    - [HyperOpt](#placeholder)
+    - [Code Snippets](#freqtrade-code-snippets)
+    - [Indicators](#freqtrade-indicators)
+    - [Strategies](#freqtrade-strategies)
+    - [Backtesting / HyperOpt](#freqtrade-backtest-hyperopt)
 - [FreqAI](#freqai-general)
     - [Code Snippets](#freqai-code-snippets)
     - [Feature Engineering](#freqai-feature-snippets)
@@ -33,12 +35,7 @@ A collection of Freqtrade & FreqAI snippets, all in one place. Mostly collected 
     - [Strategies](#freqai-strategies)
 
 
-### Freqtrade
-
-Freqtrade is a free and open source crypto trading bot written in Python. It is designed to support all major exchanges and be controlled via Telegram or webUI. It contains backtesting, plotting and money management tools as well as strategy optimization by machine learning. 
-
-[Freqtrade Discord](https://discord.com/invite/T7SmVvQ8sD) | [FreqAI Discord](https://discord.com/invite/hYuzJYKFjz) | [Documentation](https://www.freqtrade.io/en/stable/) | [Github](https://github.com/freqtrade/freqtrade)
-
+## Freqtrade
 
 ### Freqtrade Code Snippets
 
