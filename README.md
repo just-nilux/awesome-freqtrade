@@ -28,7 +28,7 @@ Freqtrade is a free and open source crypto trading bot written in Python. It is 
     - [Code Snippets](#freqtrade-code-snippets)
     - [Indicators](#freqtrade-indicators)
     - [Strategies](#freqtrade-strategies)
-    - [Backtesting / HyperOpt](#freqtrade-backtest-hyperopt)
+    - [Backtest / HyperOpt](#freqtrade-backtest-hyperopt)
 - [FreqAI](#freqai-general)
     - [Code Snippets](#freqai-code-snippets)
     - [Feature Engineering](#freqai-feature-snippets)
@@ -188,7 +188,7 @@ Freqtrade is a free and open source crypto trading bot written in Python. It is 
   ```
 </details>
 
-### Backtesting / HyperOpt
+### Backtest / HyperOpt
 
 <details>
   <summary>Freqtrade Analysis Notebook</summary>
