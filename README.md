@@ -1,3 +1,4 @@
+
 <div style="width: 100%;">
   <a href="https://github.com/just-nilux/awesome-freqtrade/blame/main/awesome-freqtrade.svg">
     <img src="awesome-freqtrade.svg" style="width: 100%;" alt="Click to see the source">
@@ -17,33 +18,34 @@ A collection of Freqtrade & FreqAI snippets, all in one place. Mostly collected 
 >
 > **It's easy to contribute!** Create an issue or PR with the content you like to add
 
-
-## Table of Contents
+## Contents
 
 - [Freqtrade](#freqtrade)
-    - [Code Snippets](#freqtrade-code-snippets)
-    - [Indicators](#freqtrade-indicators)
-    - [Strategies](#freqtrade-strategies)
-    - [Backtesting](#backtest-placeholder)
-    - [HyperOpt](#hyperopt-placeholder)
+    - [Code Snippets](#code-snippets)
+    - [Indicators](#indicators)
+    - [Strategies](#strategies)
+    - [Backtesting](#placeholder)
+    - [HyperOpt](#placeholder)
 - [FreqAI](#freqai-general)
     - [Code Snippets](#freqai-code-snippets)
     - [Feature Engineering](#freqai-feature-snippets)
     - [Custom Models](#freqai-models)
     - [Strategies](#freqai-strategies)
 
-## Freqtrade
+
+### Freqtrade
 
 Freqtrade is a free and open source crypto trading bot written in Python. It is designed to support all major exchanges and be controlled via Telegram or webUI. It contains backtesting, plotting and money management tools as well as strategy optimization by machine learning. 
 
-- [Freqtrade Discord](https://discord.com/invite/T7SmVvQ8sD) | [FreqAI Discord](https://discord.com/invite/hYuzJYKFjz) | [Documentation](https://www.freqtrade.io/en/stable/) | [Github](https://github.com/freqtrade/freqtrade)
+[Freqtrade Discord](https://discord.com/invite/T7SmVvQ8sD) | [FreqAI Discord](https://discord.com/invite/hYuzJYKFjz) | [Documentation](https://www.freqtrade.io/en/stable/) | [Github](https://github.com/freqtrade/freqtrade)
+
 
 ### Freqtrade Code Snippets
-  
+
 <details>
   <summary>Custom Trailing Stoploss</summary>
+  
   Credit: Perkmeister
-   
   ```python
       # Hyperopt Parameters
       # hard stoploss profit
@@ -86,8 +88,8 @@ Freqtrade is a free and open source crypto trading bot written in Python. It is 
 
 <details>
   <summary>Detect Pullback</summary>
+  
   Credit: nilux
-
   ```python
   def detect_pullback(df: DataFrame, periods=30, method='pct_outlier'):
       """     
@@ -133,8 +135,8 @@ Freqtrade is a free and open source crypto trading bot written in Python. It is 
 
 <details>
   <summary>SMI Trend</summary>
-  Credit: nilux
   
+  Credit: nilux
   ```python
   def smi_trend(df: DataFrame, k_length=9, d_length=3, smoothing_type='EMA', smoothing=10):
       """     
