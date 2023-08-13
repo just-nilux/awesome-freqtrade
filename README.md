@@ -186,3 +186,45 @@ Freqtrade is a free and open source crypto trading bot written in Python. It is 
   
   ```
 </details>
+
+## FreqAI
+
+### FreqAI Indicators
+
+<details>
+  <summary>SMI Kernel Regression</summary>
+  
+  Credit: _hpis_ / nilux
+  ```python
+    dataframe['smi'], dataframe['k_smi'], dataframe['k_smi_down'], dataframe['k_smi_up'] = calculate_smi_kernel(dataframe, x_0=5)
+
+    def calculate_smi_kernel(df: DataFrame, 
+                             _K: int = 10, 
+                             h: float = 8.0, 
+                             rw: float = 8.0, 
+                             x_0: int = 5, # Anything higher than 5 doesn't lead to better results imo
+                             osint: int = 40, 
+                             obint: int = 40, 
+                             _col: str = 'close'):
+    
+        def kernel_regression(_src):
+            weights = [(1 + (i**2 / (h**2 * 2 * rw)))**(-rw) for i in range(len(_src))]
+            weighted_sum = sum([val*weight for val, weight in zip(_src[x_0:], weights)])
+            return weighted_sum / sum(weights)
+    
+        # Estimations
+        df['highestHigh'] = df[_col].rolling(window=_K).max()
+        df['lowestLow'] = df[_col].rolling(window=_K).min()
+        df['highestLowestRange'] = df['highestHigh'] - df['lowestLow']
+        df['relativeRange'] = df[_col] - (df['highestHigh'] + df['lowestLow']) / 2
+        df['smi'] = 200 * (df['relativeRange'].rolling(window=_K).apply(kernel_regression, raw=True) /
+                          df['highestLowestRange'].rolling(window=_K).apply(kernel_regression, raw=True))
+        df['k_smi'] = df['smi'].rolling(window=_K).apply(kernel_regression, raw=True)
+    
+        df['k_smi_down'] = (df['smi'] < obint) & (df['smi'].shift(1) >= obint)
+        df['k_smi_up'] = (df['smi'] > -osint) & (df['smi'].shift(1) <= -osint)
+        
+        return df['smi'], df['k_smi'], df['k_smi_down'], df['k_smi_up']
+  ```
+</details>
+
