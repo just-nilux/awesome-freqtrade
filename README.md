@@ -18,7 +18,8 @@ Freqtrade is a free and open source crypto trading bot written in Python. It is 
 
 <br>
 
-> 🤍 **CONTRIBUTE** It's easy to contribute!** Create an issue or PR with the content you like to add
+> 🤍 **CONTRIBUTE** 
+> It's easy to contribute: Create an issue or PR with the content you like to add
 <br>
 
 ## Contents
