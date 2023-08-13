@@ -188,6 +188,14 @@ Freqtrade is a free and open source crypto trading bot written in Python. It is 
   ```
 </details>
 
+### Backtesting / HyperOpt
+
+<details>
+  <summary>Freqtrade Analysis Notebook</summary>
+  [Freqtrade Analysis Notebook](https://github.com/froggleston/freqtrade_analysis_notebook)
+  Credit: froggleston
+</details>
+
 ## FreqAI
 
 ### FreqAI Indicators
