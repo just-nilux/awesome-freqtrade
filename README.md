@@ -28,6 +28,7 @@ Freqtrade is a free and open source crypto trading bot written in Python. It is 
     - [Code Snippets](#freqtrade-code-snippets)
     - [Indicators](#freqtrade-indicators)
     - [Strategies](#freqtrade-strategies)
+    - [Producer-Consumer](#freqtrade-producer-consumer)
     - [Backtest / HyperOpt](#freqtrade-backtest-hyperopt)
 - [FreqAI](#freqai-general)
     - [Code Snippets](#freqai-code-snippets)
@@ -43,7 +44,7 @@ Freqtrade is a free and open source crypto trading bot written in Python. It is 
 <details>
   <summary>Custom Trailing Stoploss</summary>
   
-  Credit: Perkmeister
+  Credit: @perkmeister
   ```python
       # Hyperopt Parameters
       # hard stoploss profit
@@ -87,7 +88,7 @@ Freqtrade is a free and open source crypto trading bot written in Python. It is 
 <details>
   <summary>Detect Pullback</summary>
   
-  Credit: nilux
+  Credit: @just-nilux
   ```python
   def detect_pullback(df: DataFrame, periods=30, method='pct_outlier'):
       """     
@@ -134,7 +135,7 @@ Freqtrade is a free and open source crypto trading bot written in Python. It is 
 <details>
   <summary>SMI Trend</summary>
   
-  Credit: nilux
+  Credit: @just-nilux
   ```python
   def smi_trend(df: DataFrame, k_length=9, d_length=3, smoothing_type='EMA', smoothing=10):
       """     
@@ -188,6 +189,26 @@ Freqtrade is a free and open source crypto trading bot written in Python. It is 
   ```
 </details>
 
+### Producer-Consumer
+
+<details>
+  <summary>Example Producer-Consumer Strategy & Config</summary>
+  
+  [freqtrade_consumer_producer_strategies](https://github.com/matthieu-hm/freqtrade_consumer_producer_strategies)
+  <br>
+  Credit: @matthieu-hm
+  
+</details>
+
+<details>
+  <summary>Consumer Strategy with QuestDB Dataframe Storage</summary>
+  
+  [freqtrade_questdb](https://github.com/just-nilux/freqtrade_questdb)
+  <br>
+  Credit: @just-nilux
+  
+</details>
+
 ### Backtest / HyperOpt
 
 <details>
@@ -195,7 +216,7 @@ Freqtrade is a free and open source crypto trading bot written in Python. It is 
   
   [Freqtrade Analysis Notebook](https://github.com/froggleston/freqtrade_analysis_notebook)
   <br>
-  Credit: froggleston
+  Credit: @froggleston
   
 </details>
 
@@ -215,7 +236,7 @@ Freqtrade is a free and open source crypto trading bot written in Python. It is 
 <details>
   <summary>SMI Kernel Regression</summary>
   
-  Credit: _hpis_ / nilux
+  Credit: _hpis_ / @just-nilux
   ```python
     dataframe['smi'], dataframe['k_smi'], dataframe['k_smi_down'], dataframe['k_smi_up'] = calculate_smi_kernel(dataframe, x_0=5)
 
