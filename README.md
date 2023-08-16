@@ -31,10 +31,9 @@ Freqtrade is a free and open source crypto trading bot written in Python. It is 
     - [Producer-Consumer](#producer-consumer)
     - [Backtest / HyperOpt](#freqtrade-backtest-hyperopt)
 - [FreqAI](#freqai)
-    - [Code Snippets](#freqai-code-snippets)
-    - [Feature Engineering](#freqai-feature-snippets)
-    - [Custom Models](#freqai-models)
-    - [Strategies](#freqai-strategies)
+    - [Helper / Tools](#freqai-tools)
+    - [Reinforcement Learning](#freqai-reinforcement-learning)
+    - [Custom Models](#freqai-custom-models)
 
 
 ## Freqtrade
@@ -44,7 +43,7 @@ Freqtrade is a free and open source crypto trading bot written in Python. It is 
 <details>
   <summary>Custom Trailing Stoploss</summary>
   
-  Credit: @perkmeister
+  Credit: @github/perkmeister
   ```python
       # Hyperopt Parameters
       # hard stoploss profit
@@ -88,7 +87,7 @@ Freqtrade is a free and open source crypto trading bot written in Python. It is 
 <details>
   <summary>Detect Pullback</summary>
   
-  Credit: @just-nilux
+  Credit: @github/just-nilux
   ```python
   def detect_pullback(df: DataFrame, periods=30, method='pct_outlier'):
       """     
@@ -135,7 +134,7 @@ Freqtrade is a free and open source crypto trading bot written in Python. It is 
 <details>
   <summary>SMI Trend</summary>
   
-  Credit: @just-nilux
+  Credit: @github/just-nilux
   ```python
   def smi_trend(df: DataFrame, k_length=9, d_length=3, smoothing_type='EMA', smoothing=10):
       """     
@@ -189,54 +188,10 @@ Freqtrade is a free and open source crypto trading bot written in Python. It is 
   ```
 </details>
 
-### Producer-Consumer
-
-<details>
-  <summary>Example Producer-Consumer Strategy & Config</summary>
-  
-  [freqtrade_consumer_producer_strategies](https://github.com/matthieu-hm/freqtrade_consumer_producer_strategies)
-  <br>
-  Credit: @matthieu-hm
-  
-</details>
-
-<details>
-  <summary>Consumer Strategy with QuestDB Dataframe Storage</summary>
-  
-  [freqtrade_questdb](https://github.com/just-nilux/freqtrade_questdb)
-  <br>
-  Credit: @just-nilux
-  
-</details>
-
-### Backtest / HyperOpt
-
-<details>
-  <summary>Freqtrade Analysis Notebook</summary>
-  
-  [Freqtrade Analysis Notebook](https://github.com/froggleston/freqtrade_analysis_notebook)
-  <br>
-  Credit: @froggleston
-  
-</details>
-
-## FreqAI
-
-<details>
-  <summary>Dynamic Pairlist for FreqAI</summary>
-  
-  [Dynamic Pairlist for FreqAI](https://github.com/mrzdev/refreshpairlist)
-  <br>
-  Credit: @mrzdev
-  
-</details>
-
-### FreqAI Indicators
-
 <details>
   <summary>SMI Kernel Regression</summary>
   
-  Credit: _hpis_ / @just-nilux
+  Credit: _hpis_ / @github/just-nilux
   ```python
     dataframe['smi'], dataframe['k_smi'], dataframe['k_smi_down'], dataframe['k_smi_up'] = calculate_smi_kernel(dataframe, x_0=5)
 
@@ -269,4 +224,49 @@ Freqtrade is a free and open source crypto trading bot written in Python. It is 
         return df['smi'], df['k_smi'], df['k_smi_down'], df['k_smi_up']
   ```
 </details>
+
+### Producer-Consumer
+
+<details>
+  <summary>Example Producer-Consumer Strategy & Config</summary>
+  
+  [freqtrade_consumer_producer_strategies](https://github.com/matthieu-hm/freqtrade_consumer_producer_strategies)
+  <br>
+  Credit: @github/matthieu-hm
+  
+</details>
+
+<details>
+  <summary>Consumer Strategy with QuestDB Dataframe Storage</summary>
+  
+  [freqtrade_questdb](https://github.com/just-nilux/freqtrade_questdb)
+  <br>
+  Credit: @github/just-nilux
+  
+</details>
+
+### Backtest / HyperOpt
+
+<details>
+  <summary>Freqtrade Analysis Notebook</summary>
+  
+  [Freqtrade Analysis Notebook](https://github.com/froggleston/freqtrade_analysis_notebook)
+  <br>
+  Credit: @github/froggleston
+  
+</details>
+
+## FreqAI
+
+### FreqAI Tools
+
+<details>
+  <summary>Dynamic Pairlist for FreqAI</summary>
+  
+  [Dynamic Pairlist for FreqAI](https://github.com/mrzdev/refreshpairlist)
+  <br>
+  Credit: @github/mrzdev
+  
+</details>
+
 
